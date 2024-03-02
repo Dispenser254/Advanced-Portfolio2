@@ -1,0 +1,53 @@
+/* eslint-disable react/no-unknown-property */
+/* eslint-disable react/no-unescaped-entities */
+// import React from 'react'
+import Avatar from '../assets/Avatars/Avatar.svg';
+import { TypeAnimation } from "react-type-animation";
+import contactInfo from '../data/contactInfo'
+import { Link } from 'react-scroll';
+import { FaArrowDown } from 'react-icons/fa6';
+
+const HomePage = () => {
+    const work = ['Frontend Development', 2000, 'Backend Development', 2000, 'Android Development', 2000, 'Web Designer', 2000, 'UI/UX Designing', 2000]
+
+  return (
+    <div name='Home' className="pt-8 h-full min-h-screen w-full flex items-center bg-gradient-to-b from-black via-black to-gray-800">
+        <div className="section gap-16 md:gap-1 md:justify-between items-center md:flex-row-reverse">
+            <div className="flex flex-col justify-center md:w-2/5 max-w-[320px]">
+                <img src={Avatar} alt="" width="auto" height="auto" loading="eager" title="Avatar" className="rounded-full mx-auto w-full" />
+            </div>
+            <div className="pl-2 xs:pl-8 flex flex-col gap-3 justify-center text-gray-200 w-max md:w-3/5">
+                <h1 className="text-5xl xs:text-6xl lg:text-7xl font-bold">
+                    <span className="block">Hi there, </span>
+                    <span>I'm</span>
+                    <span className="text-transparent bg-gradient-to-br from-cyan-300 to-blue-600 bg-clip-text">Kibe</span>
+                </h1>
+                <p className="text-gray-400 text-xl xs:text-2xl font-semibold py-4 min-w-[16rem] xs:min-w-[25rem] max-w-[26rem]">
+                    <span className="block xs:inline">I am into</span>
+                    <span className="text-cyan-400 xs:pl-2">
+                        <TypeAnimation sequence={work} speed={1} wrapper='span' cursor={true} repeat={Infinity} />
+                    </span>
+                </p>
+                <ul className="flex items-center z-40 gap-3 md:gap-8 lg:gap-4 justify-start">
+                    {contactInfo.map(({ id, link, title, icon, download}) => (
+                        <li key={id} link={link} className={`group relative w-8 h-8 flex justify-center items-center rounded-full p-1 sm:grayscale cursor-pointer duration-[450ms] transition ease-in hover:grayscale-0 hover:scale-105 focus:grayscale-0 focus:scale-105 active:grayscale-0 active:scale-105`}>
+                            <a href={link} target="_blank" rel="noopener noreferrer" download={download}>{icon}</a>
+                            <div className="flex scale-0 sm:group-hover:scale-100 group-focus:scale-100 transition ease-out duration-300 delay-100 origin-center justify-center items-center absolute z-50 -bottom-10 w-auto h-6 py-2 px-3 bg-gray-900 text-sm text-gray-300">{title}</div>
+                        </li>
+                    ))}
+                </ul>
+                <div className="py-5">
+                    <Link to="about" smooth duration={500} className='z-30 group bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center gap-3 px-6 py-3 rounded-lg ease-linear duration-300 delay-75 transition-all cursor-pointer w-40 relative'>
+                        <span className="pr-6 sm:pr-0 sm:group-hover:-translate-x-5 sm:transition-transform delay-[400ms] ease-out">About Me</span>
+                        <span className="absolute z-30 right-5 sm:-translate-y-7 sm:group-hover:translate-y-0 sm:scale-0 transition-all group-hover:scale-125 ease-in delay-200 animate-pulse duration-500">
+                            <FaArrowDown />
+                        </span>
+                    </Link>
+                </div>
+            </div>
+        </div>
+        </div>
+  )
+}
+
+export default HomePage
