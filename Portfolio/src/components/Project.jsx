@@ -1,12 +1,21 @@
 /* eslint-disable react/prop-types */
 // import React from 'react'
 
-import Card from "./Card"
-import CardCover from "./CardCover"
+import Card from "./Card";
+import CardCover from "./CardCover";
 import { FaCode } from "react-icons/fa";
 import { FaLink } from "react-icons/fa6";
 
-const Project = ({ project: {img, demo,code, description, style = {shadow: "shadow-gray-500", cover: "from-gray-500"}}}) => {
+const Project = ({
+  project: {
+    img,
+    demo,
+    code,
+    Title,
+    description,
+    style = { shadow: "shadow-gray-500", cover: "from-gray-500" },
+  },
+}) => {
   return (
     <Card style={style}>
       <div className="group relative rounded-md cursor-pointer">
@@ -20,6 +29,9 @@ const Project = ({ project: {img, demo,code, description, style = {shadow: "shad
           className="rounded-t-md"
         />
         <CardCover style={style} text={description} />
+      </div>
+      <div className="flex items-center justify-center m-2 cursor-pointer font-bold text-lg bg-black">
+        <a href={code}>{Title}</a>
       </div>
       <div className="flex items-center justify-center rounded-b-md">
         <ProjectsLinks
@@ -35,15 +47,20 @@ const Project = ({ project: {img, demo,code, description, style = {shadow: "shad
       </div>
     </Card>
   );
-}
+};
 
-const ProjectsLinks = ({name, link, style}) => {
-    return (
-        <a href={link} target="_blank" rel="noopener noreferrer" className={` w-1/2 py-3 text-center  text-xl bg-black hover:bg-gradient-to-t cursor-pointer ${style} to-black duration-500 flex justify-center items-center text-white`}>
-            {name === "Code" ?<FaCode /> : <FaLink /> }
-            <span className="pl-2">{name}</span>
-        </a>
-    )
-}
+const ProjectsLinks = ({ name, link, style }) => {
+  return (
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={` w-1/2 py-3 text-center  text-xl bg-black hover:bg-gradient-to-t cursor-pointer ${style} to-black duration-500 flex justify-center items-center text-white`}
+    >
+      {name === "Code" ? <FaCode /> : <FaLink />}
+      <span className="pl-2">{name}</span>
+    </a>
+  );
+};
 
-export default Project
+export default Project;

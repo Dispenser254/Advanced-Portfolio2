@@ -8,6 +8,8 @@ import HomePage from "./components/Home"
 import ProjectsPage from "./components/Projects"
 import SkillsPage from "./components/Skills"
 import Navbar from "./components/navigation/Navbar"
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   return (
@@ -20,6 +22,7 @@ const App = () => {
       <ContactPage />
       <FooterPage />
       <BackToTop />
+      <ToastContainer/>
     </div>
   )
 }

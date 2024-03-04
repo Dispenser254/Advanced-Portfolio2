@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
 // import React from 'react'
@@ -8,6 +9,8 @@ import { MdEmail, MdOutgoingMail } from "react-icons/md";
 import { FaUser } from "react-icons/fa6";
 import { IoChatboxEllipses } from "react-icons/io5";
 import SectionHeading from "./SectionHeading";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 
 const ContactPage = () => {
   const initialFormData = { name: "", email: "", message: "" };
@@ -29,12 +32,33 @@ const ContactPage = () => {
       initialFormData,
       initialErrData
     );
+
+    if (!errData.nameError && !errData.emailError && !errData.messageError) {
+      emailjs
+        .sendForm(
+          "service_z0b1bs9",
+          "template_lmfeiaa",
+          e.target,
+          "Sk0aC6n-5QG6bVMYx"
+        )
+        .then(
+          (result) => {
+            console.log("Email successfully sent!", result.text);
+            toast.success("Email successfully sent!!");
+            setFormData(initialFormData);
+          },
+          (error) => {
+            console.error("Email sending failed:", error);
+            toast.error("Email sending failed!");
+          }
+        );
+    }
   };
 
   useEffect(() => {
     setFormData(initialFormData);
     setErrData(initialErrData);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -43,7 +67,10 @@ const ContactPage = () => {
       name="Contact"
     >
       <div className="section">
-        <SectionHeading heading="Contact" secondHeading="Fill the form to get in touch with me" />
+        <SectionHeading
+          heading="Contact"
+          secondHeading="Fill the form to get in touch with me"
+        />
         <div className="flex justify-center items-center">
           <form
             onSubmit={handleSubmit}
@@ -85,7 +112,9 @@ const ContactPage = () => {
               <div className="relative">
                 <textarea
                   name="message"
-                  placeholder="Enter message" rows="10" cols="30"
+                  placeholder="Enter message"
+                  rows="10"
+                  cols="30"
                   className={`peer form-input ${
                     errData.messageError !== "" && "border-red-500"
                   }`}
@@ -113,19 +142,21 @@ const ContactPage = () => {
 export default ContactPage;
 
 const FormIcon = ({ name }) => {
-    return (
-        <span className={`peer-placeholder-shown:grayscale peer-focus:grayscale-0 peer-active:grayscale-0 absolute left-3 ${name === "chat" ? "top-[0.8rem]": "top-1/2 -translate-y-1/2"}`}>
-            {name === "user" && <FaUser color="#5EEAC3" />}
-            {name === "gmail" && <MdEmail color="red" /> }
-            {name === "chat" && <IoChatboxEllipses color="blue" />}
-        </span>
-    )
-}
+  return (
+    <span
+      className={`peer-placeholder-shown:grayscale peer-focus:grayscale-0 peer-active:grayscale-0 absolute left-3 ${
+        name === "chat" ? "top-[0.8rem]" : "top-1/2 -translate-y-1/2"
+      }`}
+    >
+      {name === "user" && <FaUser color="#5EEAC3" />}
+      {name === "gmail" && <MdEmail color="red" />}
+      {name === "chat" && <IoChatboxEllipses color="blue" />}
+    </span>
+  );
+};
 
 const ErrorBox = ({ message }) => {
-    return (
-        <div className="text-sm min-h-[1.3rem] text-red-500 px-3">
-            {message}
-        </div>
-    )
-}
+  return (
+    <div className="text-sm min-h-[1.3rem] text-red-500 px-3">{message}</div>
+  );
+};

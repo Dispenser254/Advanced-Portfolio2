@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 // import React from 'react'
-import resume from "../assets/resume.pdf";
+import resume from "../assets/StephenKibe.pdf";
 import profile from "../assets/profile.jpg";
 import SectionHeading from "./SectionHeading";
 import techStack from "../data/techStack";
@@ -59,16 +59,18 @@ const AboutPage = () => {
           <div className="py-3 text-gray-50 sm:flex font-semibold">
             <div className="mb-3">My Tech Stack</div>
             <ul className="px-2 flex gap-5 z-40 flex-wrap">
-              {techStack.map(({ id, icon, name }) => (
-                <>
-                  <li key={id} className="relative list-none group">
-                    <span className="z-20">{icon}</span>
-                  </li>
-                  <div className="flex scale-0 sm:group-hover:scale-100 group-focus:scale-100 transition ease-out duration-300 delay-100 origin-center justify-center items-center absolute z-50 -bottom-10 left-1/2 -translate-x-1/2 w-auto h-6 py-2 px-3 bg-gray-900 text-sm text-gray-300">
-                    {name}
-                  </div>
-                </>
-              ))}
+              {techStack.map(({ id, icon, name }) =>{
+                return (
+                  <>
+                    <li key={id} className="relative list-none group">
+                      <span className="z-20">{icon}</span>
+                    </li>
+                    <div className="flex scale-0 sm:group-hover:scale-100 group-focus:scale-100 transition ease-out duration-300 delay-100 origin-center justify-center items-center absolute z-50 -bottom-10 left-1/2 -translate-x-1/2 w-auto h-6 py-2 px-3 bg-gray-900 text-sm text-gray-300">
+                      {name}
+                    </div>
+                  </>
+                );
+              })}
             </ul>
           </div>
           <div className="py-5">

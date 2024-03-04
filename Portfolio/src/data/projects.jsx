@@ -1,102 +1,103 @@
-// import Dev_Notes from "../assets/Projects/DEV_NOTES.png";
-import Dev_News from "../assets/Projects/Dev_News.png";
-// import CLI_TMA from "../assets/Projects/CLI_TMA.png";
-// import ECF from "../assets/Projects/ECF.png";
-// import FAC from "../assets/Projects/FAC.png";
-import ECOMMERCE_DASHBOARD from "../assets/Projects/ECOMMERCE_DASHBOARD.png";
-import DevFolio from "../assets/Projects/DevFolio.png";
-// import SIMON_GAME from "../assets/Projects/SIMON_GAME.png";
-import TODO_APP from "../assets/Projects/TODO_APP.png";
+import Project1 from "../assets/Projects/Project-1.png";
+import Project2 from "../assets/Projects/Project-2.png";
+import Project3 from "../assets/Projects/Project-3.png";
 
 const projects = [
   {
-    img: ECOMMERCE_DASHBOARD,
-    name: "Ecommerce Dashboard",
+    img: Project1,
+    name: "Youtube Clone",
     demo: "",
-    code: "#",
+    code: "https://github.com/Dispenser254/React-redux-Youtube-Clone",
+    Title: "Youtube Clone",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet error at tenetur perferendis nihil consectetur consequuntur molestiae magni rem, possimus debitis in nisi exercitationem, fuga unde laborum illum libero dicta!",
+      "Replicating the core functionalities of the renowned video-sharing platform, this project demonstrates my proficiency in front-end and back-end development.",
     style: {
-      shadow: "shadow-[#3498AB]",
-      cover: "from-[#3498AB]",
+      shadow: "shadow-[#B5C0D0]",
+      cover: "from-[#B5C0D0]",
       display: "hidden group-hover:flex",
     },
   },
   {
-    img: Dev_News,
-    name: "Dev News",
+    img: Project1,
+    name: "Hotel Management System",
     demo: "",
-    code: "#",
+    code: "https://github.com/Dispenser254/Hotel-Management-System",
+    Title: "Hotel Management System",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet error at tenetur perferendis nihil consectetur consequuntur molestiae magni rem, possimus debitis in nisi exercitationem, fuga unde laborum illum libero dicta!",
+      "Developed to streamline hotel operations, this system offers comprehensive functionalities for managing reservations, room assignments, guest check-ins, and billing. ",
     style: {
-      shadow: "shadow-[#FB923C]",
-      cover: "from-[#FB923C]",
+      shadow: "shadow-[#BFEA7C]",
+      cover: "from-[#BFEA7C]",
       display: "hidden group-hover:flex",
     },
   },
   {
-    img: DevFolio,
-    name: "Devfolio ",
+    img: Project2,
+    name: "Real Estate",
     demo: "",
-    code: "#",
+    code: "https://github.com/Dispenser254/Django-Real-Estate",
+    Title: "Real Estate System",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet error at tenetur perferendis nihil consectetur consequuntur molestiae magni rem, possimus debitis in nisi exercitationem, fuga unde laborum illum libero dicta!",
+      "Designed to streamline property management and sales processes, this system offers features such as property listings, search filters, and appointment scheduling. ",
     style: {
-      shadow: "shadow-[#23CEEE]",
-      cover: "from-[#23CEEE]",
+      shadow: "shadow-[#8E7AB5]",
+      cover: "from-[#8E7AB5]",
       display: "hidden group-hover:flex",
     },
   },
   {
-    img: DevFolio,
-    name: "Devfolio ",
+    img: Project2,
+    name: "Student Management System",
     demo: "",
-    code: "#",
+    code: "https://github.com/Dispenser254/Student-Management-System",
+    Title: "Student Management App",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet error at tenetur perferendis nihil consectetur consequuntur molestiae magni rem, possimus debitis in nisi exercitationem, fuga unde laborum illum libero dicta!",
+      "Tailored for educational institutions, this system simplifies administrative tasks such as student enrollment, attendance tracking, and grade management.",
     style: {
-      shadow: "shadow-[#23CEEE]",
-      cover: "from-[#23CEEE]",
+      shadow: "shadow-[#1D24CA]",
+      cover: "from-[#1D24CA]",
       display: "hidden group-hover:flex",
     },
   },
   {
-    img: DevFolio,
-    name: "Devfolio ",
+    img: Project1,
+    name: "ToDo App ",
     demo: "",
-    code: "#",
+    code: "https://github.com/Dispenser254/react-todoapp",
+    Title: "ToDo App",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet error at tenetur perferendis nihil consectetur consequuntur molestiae magni rem, possimus debitis in nisi exercitationem, fuga unde laborum illum libero dicta!",
+      "Built using React.js, this to-do application provides a simple yet powerful interface for managing tasks.",
     style: {
-      shadow: "shadow-[#23CEEE]",
-      cover: "from-[#23CEEE]",
+      shadow: "shadow-[#ECB159]",
+      cover: "from-[#ECB159]",
       display: "hidden group-hover:flex",
     },
   },
   {
-    img: DevFolio,
-    name: "Devfolio ",
+    img: Project3,
+    name: "Note App",
     demo: "",
-    code: "#",
+    code: "https://github.com/Dispenser254/Note-App",
+    Title: "Note App",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet error at tenetur perferendis nihil consectetur consequuntur molestiae magni rem, possimus debitis in nisi exercitationem, fuga unde laborum illum libero dicta!",
+      "This application simplifies the process of capturing and organizing notes across various devices.",
     style: {
-      shadow: "shadow-[#23CEEE]",
-      cover: "from-[#23CEEE]",
+      shadow: "shadow-[#C6DCBA]",
+      cover: "from-[#C6DCBA]",
       display: "hidden group-hover:flex",
     },
   },
   {
-    img: TODO_APP,
-    name: "TODO app ",
+    img: Project2,
+    name: "JWT Authentication App ",
     demo: "",
-    code: "#",
+    code: "https://github.com/Dispenser254/JWT-Django-React-Authentication",
+    Title: "Authentication App",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet error at tenetur perferendis nihil consectetur consequuntur molestiae magni rem, possimus debitis in nisi exercitationem, fuga unde laborum illum libero dicta!",
+      "Implementing JSON Web Token (JWT) authentication, this application ensures secure access to protected resources through token-based authentication.",
     style: {
-      shadow: "shadow-[#A582E2]",
-      cover: "from-[#A582E2]",
+      shadow: "shadow-[#9B4444]",
+      cover: "from-[#9B4444]",
       display: "hidden group-hover:flex",
     },
   },

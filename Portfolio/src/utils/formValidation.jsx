@@ -45,7 +45,9 @@ const validateForm = (
   setFormData,
   setErrData,
   initialFormData,
-  initialErrData
+  initialErrData,
+  getFormUrl,
+  successUrl
 ) => {
   const validName = checkName(formData.name.trim());
   const validEmail = checkEmail(formData.email.trim());
@@ -81,13 +83,13 @@ const validateForm = (
     submitionFormData.append("name", formData.name.trim());
     submitionFormData.append("email", formData.email.trim());
     submitionFormData.append("message", formData.message.trim());
-    fetch(`${import.meta.env.VITE_GET_FORM_URL}`, {
+    fetch(getFormUrl, {
       method: "POST",
       body: submitionFormData,
     })
       .then((response) => {
         if (response.redirected === true) {
-          window.location = import.meta.env.VITE_GETFORM_SUCCESS_URL;
+          window.location = successUrl;
           setFormData(initialFormData);
           setErrData(initialErrData);
         }
