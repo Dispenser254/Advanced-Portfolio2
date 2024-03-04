@@ -32,22 +32,28 @@ const AboutPage = () => {
           </h3>
           <div className="text-gray-400 py-4 space-y-2 md:space-y-2 md:pt-8 lg:pt-12 font-semibold text-justify">
             <p className="leading-tight">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-              error at tenetur perferendis nihil consectetur consequuntur
-              molestiae magni rem, possimus debitis in nisi exercitationem, fuga
-              unde laborum illum libero dicta!
+              As a dedicated software engineering student with a keen interest
+              in full-stack web development, I am driven by a passion for
+              leveraging technology to address societal challenges. With a
+              strong foundation in both front-end and back-end development, I am
+              adept at utilizing a variety of programming languages, frameworks,
+              and tools to create innovative solutions.
             </p>
             <p className="leading-tight">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-              error at tenetur perferendis nihil consectetur consequuntur
-              molestiae magni rem, possimus debitis in nisi exercitationem, fuga
-              unde laborum illum libero dicta!
+              In addition to my technical skills, I possess a proactive mindset,
+              always seeking out opportunities to apply my knowledge and
+              expertise to develop software that has a positive impact on
+              society. Whether it's through optimizing existing systems or
+              creating entirely new applications, I am committed to utilizing my
+              abilities to contribute meaningfully to addressing real-world
+              problems.
             </p>
             <p className="leading-tight">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-              error at tenetur perferendis nihil consectetur consequuntur
-              molestiae magni rem, possimus debitis in nisi exercitationem, fuga
-              unde laborum illum libero dicta!
+              I thrive in collaborative environments, where I can exchange
+              ideas, learn from others, and work together towards common goals.
+              My goal is to continue growing as a software engineer, constantly
+              expanding my skill set and knowledge base, while making a
+              meaningful difference in the world through technology.
             </p>
           </div>
           <div className="py-3 text-gray-50 sm:flex font-semibold">
@@ -77,7 +83,7 @@ const AboutPage = () => {
                 Resume
               </span>
               <span className="absolute right-5 sm:scale-0 transition-all group-hover:scale-100 ease-in delay-200 animate-pulse duration-500 ">
-                <FaDownload/>
+                <FaDownload />
               </span>
             </a>
           </div>
